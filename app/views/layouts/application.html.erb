@@ -1,27 +1,15 @@
-    <% if user_signed_in? %>
-      <li class="">
-        <%= link_to "logout", "#" %>
-      </li>
-      <li class="">
-        <%= link_to 'Users', "#" %>
-      </li>
-      <li class="">
-        <%= link_to 'Books', "#" %>
-      </li>
-      <li>
-        <%= link_to 'Home', "#" %>
-      </li>
-    <% else %>
-      <li class="">
-        <%= link_to "sign up", new_user_registration_path %>
-      </li>
-      <li class="">
-        <%= link_to "login", new_user_session_path %>
-      </li>
-      <li class="">
-        <%= link_to 'Home', "#" %>
-      </li>
-      <li>
-        <%= link_to 'About', "#" %>
-    <% end %>
-  </ul>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookers</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
